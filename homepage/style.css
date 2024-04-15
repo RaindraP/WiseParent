@@ -1,0 +1,45 @@
+body {
+    font-family: Poppins;
+    margin: 0; /* Menghapus margin tubuh secara default */
+    padding: 0; /* Menghapus padding tubuh secara default */
+    color: #484A51;
+}
+.nav-link{
+    color: rgb(0, 0, 0);
+}
+.nav-item{
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.card{
+    background-color: rgba(199, 148, 176, 0.5);
+    padding: 10px;
+    border-radius: 20px; /* Menambahkan border radius pada card */
+}
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: auto;
+    background: linear-gradient(to right, #C694AF, #8A7EA4);
+    color: #ffffff;
+    padding: 20px 0 20px;
+    font-size: 20px;
+    line-height: 20px;
+}
+footer .nav-link  , footer i{
+    color: white;
+
+}
+.col a{
+    margin-bottom: 10px;
+}
+.social a{
+    margin-left: 8px;
+}
+.logo1{
+    width: 30%; 
+    margin: auto;
+}
+h4, p{
+    color: #484A51;
+}
