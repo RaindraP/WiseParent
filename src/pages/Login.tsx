@@ -1,19 +1,38 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import jwt_decode from "jsonwebtoken";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    // Save user details to localStorage
-    localStorage.setItem(
-      "user",
-      JSON.stringify({ name: "Miori Celesta", email: "miori@gmail.com" })
-    );
+    //req api
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/v1/auth/login",
+        {
+          email,
+          password,
+        }
+      );
+
+      console.log("Login successful:", response.data);
+      const userData = response.data;
+
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ name: userData.user.name, email: userData.user.email })
+      );
+
+      localStorage.setItem("token", userData.authorization.token);
+    } catch (error) {
+      console.error("Login error:", error);
+    }
 
     // Redirect user to "/"
     navigate("/");

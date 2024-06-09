@@ -12,10 +12,6 @@ const navItem = [
     navName: "Profile",
     navHref: "/profile",
   },
-  {
-    navName: "My Courses",
-    navHref: "/courses",
-  },
 ];
 
 export default function NavbarProfile({
@@ -35,6 +31,7 @@ export default function NavbarProfile({
 
   const handleLogOut = () => {
     localStorage.removeItem("user");
+    localStorage.removeItem("token");
 
     navigate("/login");
   };

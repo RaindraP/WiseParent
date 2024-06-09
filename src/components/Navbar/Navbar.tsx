@@ -17,9 +17,14 @@ export default function Navbar({ theme, selected }: NavbarProps) {
       selected: selected === "parenting" ? true : false,
     },
     {
-      name: "Course",
-      href: "/course",
-      selected: selected === "course" ? true : false,
+      name: "Kids Zone",
+      href: "/kidszone",
+      selected: selected === "kidszone" ? true : false,
+    },
+    {
+      name: "Schedule",
+      href: "/schedule",
+      selected: selected === "schedule" ? true : false,
     },
     {
       name: "About Us",

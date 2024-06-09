@@ -1,6 +1,7 @@
 import Navbar from "../Navbar/Navbar";
 
 const HeroDefault = () => {
+  //check
   return (
     <>
       <Navbar theme="dark" selected="home" />

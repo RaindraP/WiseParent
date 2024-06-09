@@ -18,9 +18,9 @@ const WhatWeOffer = () => {
                 height={373}
                 className="my-6"
               />
-              <p className="font-bold">Parenting Class</p>
+              <p className="font-bold">Parenting Guides</p>
               <p className="text-justify">
-                Join our parenting classes to get practical guidance and
+                Read our parenting guides to get practical guidance and
                 in-depth knowledge in educating children
               </p>
             </div>
@@ -33,10 +33,11 @@ const WhatWeOffer = () => {
                 height={373}
                 className="my-6"
               />
-              <p className="font-bold">Ask with Community</p>
+              <p className="font-bold">Scheduling</p>
               <p className="text-justify">
-                Through the 'ask your question' feature you can get answers from
-                community that can help you become a good parent.
+                Through the 'Schedule' feature you can makes decision-making easier,
+                eleminates uncertainties, and builds healthy habits to manage your time
+                and energy better.
               </p>
             </div>
             <div className="flex flex-col gap-4">
@@ -47,10 +48,11 @@ const WhatWeOffer = () => {
                 height={373}
                 className="my-6"
               />
-              <p className="font-bold">Information Sharing</p>
+              <p className="font-bold">KidZone</p>
               <p className="text-justify">
-                Providing trusted and useful content, to support you in
-                addressing important aspects of parenting.
+                Explore our Kidzone section for fun and educational activities designed to engage your children. 
+                From namely to kisahnesia, find endless ideas to stimulate their 
+                imagination and support their development.
               </p>
             </div>
           </div>

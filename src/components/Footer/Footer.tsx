@@ -4,10 +4,10 @@ const LINKS = [
     url: "/",
     items: [
       { display: "Home", url: "" },
-
       { display: "Parenting Guide", url: "" },
       { display: "About Us", url: "" },
-      { display: "Course", url: "" },
+      { display: "Kidz Zone", url: "" },
+      { display: "Schedule", url: "" },
     ],
   },
   {

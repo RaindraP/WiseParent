@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -8,14 +9,34 @@ export default function Register() {
   const [displayname, setDisplayname] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    // Save user details to localStorage
-    localStorage.setItem(
-      "user",
-      JSON.stringify({ name: displayname, email: email })
-    );
+    try {
+      console.log(
+        "name" + displayname + "email" + email + "password" + password
+      );
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/v1/auth/register",
+        {
+          name: displayname,
+          email: email,
+          password: password,
+        }
+      );
+
+      console.log("Register and login successful:", response.data);
+      const userData = response.data;
+
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ name: displayname, email: email })
+      );
+
+      localStorage.setItem("token", userData.authorization.token);
+    } catch (error) {
+      console.error("Register and login error:", error);
+    }
 
     // Redirect user to "/"
     navigate("/");
